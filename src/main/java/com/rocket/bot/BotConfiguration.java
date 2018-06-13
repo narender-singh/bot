@@ -3,14 +3,13 @@ package com.rocket.bot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.rocket.bot.ws.BotSvcImpl;
-import com.rocket.bot.ws.IBotService;;
+import com.rocket.bot.ws.BotSvcImpl;;
 
 @Configuration
 public class BotConfiguration {
 
 	@Bean
-	public IBotService botSvc(){
+	public BotSvcImpl botSvc(){
 		return new BotSvcImpl();
 	}
 }

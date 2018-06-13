@@ -12,6 +12,6 @@ public class Bot extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from("jetty:http://0.0.0.0:8080/v1/?matchOnUriPrefix=true").to("");
+		from("jetty:http://0.0.0.0:{{http.port}}/?matchOnUriPrefix=true").to("cxfbean:botSvc");
 	}
 }
